@@ -55,10 +55,11 @@ function App() {
       "image/bmp",
       "image/gif",
       "image/webp",
+      "image/avif",
     ];
 
     if (!validTypes.includes(file.type)) {
-      setError("Please upload a valid image file (JPEG, PNG, WebP, GIF)");
+      setError("Please upload a valid image file (JPEG, PNG, GIF, AVIF, WebP)");
       return;
     }
 
@@ -206,8 +207,7 @@ function App() {
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               Upload a fish photo and our deep learning model will instantly
-              identify the species from 75 different marine species with high
-              accuracy.
+              identify the species from 75 different marine species.
             </p>
           </div>
         </div>
@@ -484,7 +484,7 @@ function App() {
             {[
               {
                 title: "High Accuracy",
-                desc: "Trained on 75+ species with >95% accuracy",
+                desc: "Trained on 75+ species with >85% accuracy",
               },
               {
                 title: "Fast Processing",
@@ -518,7 +518,6 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <div className="flex items-center justify-center gap-2 mb-4">
-              <Fish className="w-5 h-5 text-blue-600" />
               <span className="font-bold text-gray-900">
                 Fish Species AI Classifier
               </span>
@@ -527,7 +526,7 @@ function App() {
               Powered by PyTorch & ResNet50 • Trained on 75 fish species
             </p>
             <p className="text-sm text-gray-500">
-              © {new Date().getFullYear()} Marine AI Research • For educational
+              © {new Date().getFullYear()} GIS Tech. Center • For educational
               purposes only
             </p>
           </div>

@@ -16,8 +16,8 @@ CORS(app)
 
 # Configuration
 UPLOAD_FOLDER = 'uploads'
-ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'bmp', 'gif'}
-MAX_FILE_SIZE = 16 * 1024 * 1024  # 16MB
+ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'bmp', 'gif', 'webp', 'avif'}
+MAX_FILE_SIZE = 16 * 1024 * 1024 
 
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.config['MAX_CONTENT_LENGTH'] = MAX_FILE_SIZE
@@ -44,13 +44,13 @@ class FishClassifier(nn.Module):
 def load_model():
     """Load the trained model"""
     try:
-        checkpoint_path = 'fish_classifier_fina.pth'  
+        checkpoint_path = 'best_fish_model_enhanced.pth'  
         
         if not os.path.exists(checkpoint_path):
             possible_paths = [
-                'models/fish_classifier_final.pth',
-                '../models/fish_classifier_final.pth',
-                'fish_classifier_final.pth'
+                'models/best_fish_model_enhanced.pth',
+                '../models/best_fish_model_enhanced.pth',
+                'best_fish_model_enhanced.pth'
             ]
             
             for path in possible_paths:
