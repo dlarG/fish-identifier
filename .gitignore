@@ -3,3 +3,10 @@ backend/models/fish_classifier_intermediate.pth
 backend/.env
 backend/models/*
 backend/uploads/*
+backend/__pycache__/
+frontend/node_modules/*
+frontend/dist/*
+frontend/dist-ssr/*
+frontend/*.local
+.vscode/*
+.idea/*
